@@ -3,8 +3,12 @@ var list = [{"jobs":[{"absolute_url":"https://datarobot.com/careers/job/1479524/
 countrySelect.addEventListener('change', function(e)  {
   var id = jQuery(this).children(":selected").attr("id");
   var name = jQuery(this).children(":selected").attr("name");
-  var url = document.getElementById("blogurl").value; 
+  var url = document.getElementById("blogurl").value;
+  if (id == 'all') {
+	window.location = url + '?page=1'; 
+  } else {
   window.location = url + '?department_id=' + id + '&department_name=' + name;
+  }
 });
 
 function findAreaCode(name) {

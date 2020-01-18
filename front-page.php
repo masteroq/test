@@ -17,6 +17,7 @@
 			<div class="header_dropbox">
 			<?php echo '<form action="'.$_SERVER['REQUEST_URI'].'" method="GET">'; ?>
 				<select id="department" onchange="this.form.submit()">
+						<option id="all" name="all" selected>All Departments</option>
 					<?php foreach($departments as $value) : ?>
 					<?php if ($_GET['department_id'] == $value['id']) { ?>
 						<option id="<?= $value['id'] ?>" name="<?= $value['name'] ?>" selected><?= $_GET['department_name'] ?></option>
@@ -30,7 +31,7 @@
 		</div>
 		<div class="remote_content">
 		<?php
-		if ($_GET['department_id'] == '') {
+		if ($_GET['department_id'] == '' || $_GET['department_id'] == 'all') {
 		foreach(array_slice($jobs, $page*$nb_elem_per_page, $nb_elem_per_page) as $value) :
 			foreach($departments as $value_dep) :
 				if ($value_dep['id'] == $value['departments'][0]):
@@ -65,7 +66,7 @@
 		?>
 		</div>
 		<div class="remote_footer">
-			<?php if ($_GET['department_id'] == '') { ?>
+			<?php if ($_GET['department_id'] == '' || $_GET['department_id'] == 'all') { ?>
 			<ul id='paginator'>
 			<?php
 			for ($i=1;$i<=$number_of_pages;$i++) {?>
