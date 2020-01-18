@@ -1,0 +1,154 @@
+/*!
+Theme Name: test
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: test
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+test is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+$font-stack:    'Titillium Web', sans-serif;
+$background-color: #F2F2F2;
+$learnmore: #2D8FE2;
+body {
+  font: 100% $font-stack;
+  background-color: $background-color;
+}
+
+.fas {
+	margin-right: 5px;
+}
+
+.fa-user-friends {
+	margin-left: 20px;
+}
+
+.content {
+	width: 1130px;
+	margin: 0px auto;
+}
+
+.remote_content {
+	font-family: $font-stack;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 588px 588px;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: stretch;
+}
+.remote_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 60px;
+}
+.remote_footer {
+	margin-bottom: 20px;
+}
+.item {
+	background: #FFFFFF;
+	border: 1px solid #D0D8E2;
+	box-sizing: border-box;
+	border-radius: 6px;
+	height: 163px;
+	margin: 24px;
+	div {
+		a {
+			text-decoration: none;
+			color: #2d8fe2;
+		}
+		.fa-arrow-right {
+			color: #2D8FE2;
+		}
+		.learnmore a {
+			color: #2D8FE2;
+		}
+		padding: 24px 24px 0 24px;
+	}
+}
+
+.header_title {
+	font-family: $font-stack;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 37px;
+	line-height: 43px;
+	color: #23232D;
+}
+#department {
+	background: #FFFFFF;
+	border: 1px solid #53718F;
+	box-sizing: border-box;
+	border-radius: 6px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 26px;
+	color: #53718F;
+}
+.vac_name {
+	font-family: Titillium Web;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+	color: #23232D !important;
+}
+.learnmore {
+	font-family: $font-stack;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 28px;
+	color: $learnmore !important;
+}
+.location {
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 24px;
+	color: #53718F;
+}
+ul {
+	display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+	background: #E1E8F0;
+	width: 300px;
+    border-radius: 6px;
+    padding: 4px;
+    margin: 0px auto;
+	li {
+		background: #FFFFFF;
+		box-shadow: 0px 2px 4px rgba(54, 77, 114, 0.18), 0px 6px 8px rgba(54, 77, 114, 0.08);
+		border-radius: 4px;
+		padding: 0px 20px;
+		height: 28px;
+		margin: 0px 3px;
+		a {
+			text-decoration: none;
+			font-family: $font-stack;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 28px;
+			text-align: center;
+			color: #53718F;
+		}
+	}
+}
