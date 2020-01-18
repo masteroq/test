@@ -104,6 +104,8 @@ body {
   font-size: 16px;
   line-height: 28px;
   color: #2D8FE2 !important; }
+  .learnmore .fa-arrow-right {
+    margin-left: 12px; }
 
 .location {
   font-family: Roboto;
@@ -122,13 +124,20 @@ ul {
   padding: 4px;
   margin: 0px auto; }
   ul li {
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(54, 77, 114, 0.18), 0px 6px 8px rgba(54, 77, 114, 0.08);
+    background: transparent;
     border-radius: 4px;
     padding: 0px 20px;
-    height: 28px;
+    height: auto;
     margin: 0px 3px; }
     ul li a {
+      color: #53718F;
+      background-color: transparent;
+      text-decoration: none;
+      font-family: "Titillium Web", sans-serif;
+      font-style: normal;
+      font-weight: 600; }
+    ul li a.active {
+      background: #FFFFFF;
       text-decoration: none;
       font-family: "Titillium Web", sans-serif;
       font-style: normal;
@@ -136,4 +145,10 @@ ul {
       font-size: 16px;
       line-height: 28px;
       text-align: center;
-      color: #53718F; }
+      color: #23232D;
+      padding: 5px 20px;
+      border-radius: 4px; }
+  ul li.active {
+    padding: 0px;
+    height: auto;
+    box-shadow: none; }

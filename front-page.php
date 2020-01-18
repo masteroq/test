@@ -69,7 +69,9 @@
 			<ul id='paginator'>
 			<?php
 			for ($i=1;$i<=$number_of_pages;$i++) {?>
-				<li><a href='./?page=<?=$i?>'><?= $i ?></a></li>
+				<?php if ($_GET['page'] == $i) { $class = 'active'; } ?>
+				<li class="<?= $class ?>"><a href='./?page=<?=$i?>' class="<?= $class ?>"><?= $i ?></a></li>
+				<?php $class = ''; ?>
 			<?php } ?>
 			</ul>
 			<?php } ?>
